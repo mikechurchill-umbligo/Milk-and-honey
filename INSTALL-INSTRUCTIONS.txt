@@ -1,0 +1,169 @@
+=====================================================
+  MILK & HONEY PREMIUM TEA
+  WordPress Installation Guide — GoDaddy Hosting
+=====================================================
+
+WHAT'S IN YOUR ZIP FILE:
+  📁 milkandhoney-child/
+     ├── style.css                      ← Theme identity file
+     ├── functions.php                  ← Theme functions
+     ├── page-milkandhoney-home.php     ← Your custom homepage
+     └── 📁 images/                    ← All 7 of your photos
+          ├── img-seating.jpg
+          ├── img-counter.jpg
+          ├── img-storefront.jpg
+          ├── img-drink-red.jpg
+          ├── img-drink-orange.jpg
+          ├── img-drink-brown.jpg
+          └── img-drink-matcha.jpg
+
+=====================================================
+STEP 1 — LOG INTO GODADDY & OPEN WORDPRESS
+=====================================================
+  1. Go to: https://account.godaddy.com
+  2. Click "My Products" → find your hosting plan
+  3. Click "Manage" next to your WordPress site
+  4. Click "WP Admin" to open your WordPress dashboard
+
+=====================================================
+STEP 2 — INSTALL THE DIVI THEME (if not already)
+=====================================================
+  If you haven't purchased Divi yet:
+  → https://www.elegantthemes.com/gallery/divi/
+
+  If Divi is already installed and active, skip to Step 3.
+
+  To install Divi:
+  1. In WordPress: Appearance → Themes → Add New
+  2. Click "Upload Theme" → choose your Divi .zip file
+  3. Click "Install Now" → Activate
+
+=====================================================
+STEP 3 — UPLOAD THE CHILD THEME
+=====================================================
+  1. In WordPress: Appearance → Themes → Add New
+  2. Click "Upload Theme"
+  3. Choose the file: milkandhoney-child.zip
+  4. Click "Install Now"
+  5. Click "Activate"
+
+  ✅ You should now see "Milk and Honey Child" as your active theme.
+
+=====================================================
+STEP 4 — CREATE YOUR HOMEPAGE
+=====================================================
+  1. In WordPress: Pages → Add New
+  2. Set the Title to: Home
+  3. On the RIGHT SIDE of the editor, find "Page Attributes"
+  4. Under "Template" — select: "Milk & Honey Home"
+  5. Click "Publish"
+
+=====================================================
+STEP 5 — SET AS YOUR HOMEPAGE
+=====================================================
+  1. Go to: Settings → Reading
+  2. Under "Your homepage displays" select: A static page
+  3. Set "Homepage" to: Home (the page you just created)
+  4. Click "Save Changes"
+
+  ✅ Your new site is now live at milkandhoneypremiumtea.com!
+
+=====================================================
+STEP 6 — ADD GOOGLE MAPS API KEY (for the map)
+=====================================================
+  The map on your "Visit Us" section needs a free API key.
+
+  Get one here (free):
+  https://console.cloud.google.com
+  → Create project → Enable "Maps JavaScript API" → Copy key
+
+  Add it in WordPress:
+  Divi → Theme Options → General → "Google API Key" field
+
+=====================================================
+STEP 7 — HIDE THE DEFAULT WORDPRESS HEADER & FOOTER
+=====================================================
+  Your custom site has its own nav and footer, so you'll
+  want to hide Divi's default header and footer.
+
+  Method A (Divi Theme Builder — easiest):
+  1. Go to: Divi → Theme Builder
+  2. Click "Add Global Header" → leave it blank → Save
+  3. Click "Add Global Footer" → leave it blank → Save
+
+  Method B (Page Settings):
+  1. Open your Home page in the editor
+  2. Scroll down to "Page Settings" (below the editor)
+  3. Set "Hide Nav" and "Hide Footer" to ON if available
+
+=====================================================
+HOW TO MAKE EDITS GOING FORWARD
+=====================================================
+
+  Since your homepage is a custom PHP template (not Divi),
+  you have TWO options for editing:
+
+  OPTION A — Edit the PHP file directly (for small changes):
+  1. In WordPress: Appearance → Theme File Editor
+  2. Select: Milk and Honey Child → page-milkandhoney-home.php
+  3. Make your edits and click "Update File"
+
+  OPTION B — Use a code editor (recommended for bigger changes):
+  1. Download the file via GoDaddy File Manager or FTP
+  2. Edit it in a free editor like VS Code (code.visualstudio.com)
+  3. Re-upload via GoDaddy File Manager
+
+=====================================================
+HOW TO TURN ON ONLINE ORDERING LATER
+=====================================================
+  When you're ready, open page-milkandhoney-home.php
+  and search for these three comments:
+
+    ORDER BUTTON HIDDEN
+    ORDER BANNER HIDDEN
+    (footer order link)
+
+  Remove the <!-- and --> comment tags around each section.
+  Save the file. Done!
+
+=====================================================
+HOW TO UPDATE THE DRINK OF THE MONTH
+=====================================================
+  Open page-milkandhoney-home.php and search for:
+  "DRINK OF THE MONTH"
+
+  Update these fields each month:
+  • The <p class="dotm-overline"> text → change the month
+  • The <h2 class="dotm-month-title"> → change drink name
+  • The <p class="dotm-desc"> → change the description
+  • The <span class="dotm-tags"> → change flavor tags
+  • The <span class="dotm-price"> → change the price
+  • The img src → upload new photo & update the filename
+
+  For the photo: upload the new drink photo to:
+  Appearance → Theme File Editor → images folder
+  OR via GoDaddy File Manager:
+  public_html/wp-content/themes/milkandhoney-child/images/
+
+=====================================================
+NEED HELP FROM GODADDY?
+=====================================================
+  GoDaddy 24/7 Support: 1-480-505-8877
+  GoDaddy Help Center:  https://www.godaddy.com/help
+  WordPress Codex:      https://wordpress.org/support/
+
+  For Divi-specific help:
+  https://www.elegantthemes.com/documentation/divi/
+
+=====================================================
+YOUR BRAND COLORS (handy reference)
+=====================================================
+  Honey Gold:   #C88B3A
+  Honey Light:  #E8B96A
+  Honey Pale:   #F5DFA8
+  Cream:        #FDF6EC
+  Warm Brown:   #4A2E1A
+  Mid Brown:    #7A4F2D
+  Off White:    #FFFDF9
+
+=====================================================

@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Milk & Honey Premium Tea — Glendora's Own Premium Tea Shop</title>
+<meta name="description" content="Milk & Honey Premium Tea is Glendora's cozy bubble tea house. Premium teas, boba drinks, and handcrafted lattes. Visit us at 208 N Glendora Ave. Open daily 11am–9pm." />
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9LE8G3MWZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y9LE8G3MWZ');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --honey:      #C88B3A;
+    --honey-light:#E8B96A;
+    --honey-pale: #F5DFA8;
+    --cream:      #FDF6EC;
+    --cream-dark: #F2E4CC;
+    --warm-brown: #4A2E1A;
+    --mid-brown:  #7A4F2D;
+    --bark:       #9C6B3C;
+    --sage:       #8A9E7E;
+    --blush:      #EAD5C5;
+    --white:      #FFFDF9;
+    --text:       #3A2214;
+    --text-soft:  #6B4C30;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ========== NOISE TEXTURE OVERLAY ========== */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 3rem;
+    background: rgba(253, 246, 236, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,139,58,0.15);
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 2px 24px rgba(74,46,26,0.10); }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .nav-brand span { display: block; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--honey); font-family: 'Nunito', sans-serif; font-weight: 600; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--mid-brown);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--honey); }
+  .nav-links .order-btn {
+    background: var(--honey);
+    color: var(--white) !important;
+    padding: 0.55rem 1.3rem;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-links .order-btn:hover { background: var(--warm-brown); transform: translateY(-1px); }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #FDF0D5 0%, #FAE3C0 40%, #F5D8A8 100%);
+  }
+
+  /* Honey drip decorative top */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--honey-light), var(--honey), var(--honey-pale), var(--honey), var(--honey-light));
+    z-index: 2;
+  }
+
+  /* Decorative circles */
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+  }
+  .hero-orb-1 { width: 500px; height: 500px; background: rgba(232,185,106,0.25); top: -100px; right: -100px; }
+  .hero-orb-2 { width: 350px; height: 350px; background: rgba(200,139,58,0.15); bottom: 0; left: -80px; }
+  .hero-orb-3 { width: 250px; height: 250px; background: rgba(138,158,126,0.12); top: 200px; left: 5%; }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--honey);
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 300;
+    color: var(--warm-brown);
+    line-height: 1.05;
+    max-width: 780px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+  }
+  .hero h1 em { font-style: italic; color: var(--honey); }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--mid-brown);
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.6s forwards;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.8s forwards;
+  }
+
+  .btn-primary {
+    background: var(--honey);
+    color: var(--white);
+    padding: 0.85rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 4px 20px rgba(200,139,58,0.35);
+  }
+  .btn-primary:hover { background: var(--warm-brown); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,46,26,0.25); }
+
+  .btn-outline {
+    border: 2px solid var(--honey);
+    color: var(--honey);
+    padding: 0.82rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.25s;
+  }
+  .btn-outline:hover { background: var(--honey); color: var(--white); transform: translateY(-2px); }
+
+  /* Floating tea cups decoration */
+  .hero-images {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+    opacity: 0;
+    animation: fadeUp 1s 1s forwards;
+  }
+  .tea-card-mini {
+    width: 160px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 50px rgba(74,46,26,0.18);
+    position: relative;
+    transform: rotate(-3deg);
+    transition: transform 0.3s;
+  }
+  .tea-card-mini:nth-child(2) { transform: rotate(0deg) translateY(-12px); }
+  .tea-card-mini:nth-child(3) { transform: rotate(3deg); }
+  .tea-card-mini:hover { transform: rotate(0deg) translateY(-8px) scale(1.04); }
+  .tea-card-mini img { width: 100%; height: 100%; object-fit: cover; }
+  .tea-card-mini .label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(74,46,26,0.75));
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1.2rem 0.8rem 0.7rem;
+    text-align: center;
+  }
+
+  /* ========== SECTION DEFAULTS ========== */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--honey);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 300;
+    color: var(--warm-brown);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+  .section-title em { font-style: italic; color: var(--honey); }
+  .divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--honey), var(--honey-pale));
+    border-radius: 2px;
+    margin-bottom: 1.8rem;
+  }
+
+  /* ========== ABOUT ========== */
+  .about {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .about::after {
+    content: '🍯';
+    position: absolute;
+    font-size: 18rem;
+    opacity: 0.04;
+    right: -3rem;
+    bottom: -4rem;
+    line-height: 1;
+  }
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-frame {
+    background: var(--cream-dark);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(74,46,26,0.12);
+    position: relative;
+  }
+  .about-img-frame::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 2px dashed rgba(200,139,58,0.3);
+    border-radius: 32px;
+    pointer-events: none;
+  }
+  .about-poem-box {
+    background: linear-gradient(135deg, var(--honey-pale), var(--cream-dark));
+    border-radius: 16px;
+    padding: 2.2rem;
+    text-align: center;
+  }
+  .about-poem-box .poem-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--warm-brown);
+    margin-bottom: 1.2rem;
+  }
+  .about-poem-box p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--mid-brown);
+    line-height: 1.9;
+    font-weight: 300;
+  }
+  .pinky-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .about-text { position: relative; z-index: 1; }
+  .about-text p {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+  }
+  .about-text p strong { color: var(--warm-brown); font-weight: 600; }
+  .about-badges {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .badge {
+    background: var(--honey-pale);
+    color: var(--mid-brown);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(200,139,58,0.25);
+  }
+
+  /* ========== MENU ========== */
+  .menu-section {
+    background: linear-gradient(180deg, var(--cream) 0%, #F9EDD5 100%);
+    position: relative;
+  }
+  .menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(90deg, var(--honey) 0, var(--honey) 10px, transparent 10px, transparent 20px);
+    opacity: 0.25;
+  }
+
+  .menu-header { text-align: center; margin-bottom: 3.5rem; }
+  .menu-header .divider { margin: 0 auto 1.8rem; }
+
+  /* Category tabs */
+  .menu-tabs {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .tab-btn {
+    background: transparent;
+    border: 1.5px solid var(--honey);
+    color: var(--honey);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--honey);
+    color: var(--white);
+  }
+
+  /* Menu categories */
+  .menu-category { display: none; }
+  .menu-category.active { display: block; animation: fadeIn 0.4s forwards; }
+
+  .menu-cat-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--warm-brown);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .menu-cat-sub {
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bark);
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+  }
+
+  /* Signature drinks — card layout */
+  .menu-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .menu-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 24px rgba(74,46,26,0.08);
+    border: 1px solid rgba(200,139,58,0.12);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .menu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(74,46,26,0.14); }
+  .menu-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    line-height: 1.3;
+    flex: 1;
+  }
+  .menu-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .menu-card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--honey);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  /* Simple list layout */
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.8rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .menu-list-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.92rem;
+    color: var(--mid-brown);
+    font-weight: 500;
+    border: 1px solid rgba(200,139,58,0.12);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .menu-list-item:hover { border-color: var(--honey-light); background: var(--cream-dark); }
+  .menu-list-item::before { content: '✦'; color: var(--honey-light); font-size: 0.65rem; flex-shrink: 0; }
+
+  /* Toppings/foam grid */
+  .add-on-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .add-on-box {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(200,139,58,0.15);
+    box-shadow: 0 4px 20px rgba(74,46,26,0.06);
+  }
+  .add-on-box-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    margin-bottom: 0.3rem;
+  }
+  .add-on-price-tag {
+    display: inline-block;
+    background: var(--honey-pale);
+    color: var(--honey);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+  .add-on-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .add-on-item {
+    background: var(--cream);
+    color: var(--text-soft);
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid var(--cream-dark);
+    transition: all 0.2s;
+  }
+  .add-on-item:hover { background: var(--honey-pale); border-color: var(--honey-light); color: var(--warm-brown); cursor: default; }
+
+  /* ========== ORDER BANNER ========== */
+  .order-banner {
+    background: var(--warm-brown);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .order-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(200,139,58,0.25) 0%, transparent 65%);
+  }
+  .order-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    color: var(--honey-pale);
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  .order-banner p {
+    font-size: 1rem;
+    color: rgba(245,223,168,0.75);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    position: relative;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .order-banner .btn-primary {
+    background: var(--honey);
+    font-size: 0.9rem;
+    padding: 1rem 2.8rem;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .order-banner .btn-primary:hover { background: var(--honey-light); color: var(--warm-brown); }
+
+  /* ========== VISIT ========== */
+  .visit { background: var(--white); }
+  .visit-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .visit-info { }
+  .info-row {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--honey-pale);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .info-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--honey);
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .info-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--warm-brown);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .info-value a { color: var(--warm-brown); text-decoration: none; }
+  .info-value a:hover { color: var(--honey); }
+
+  .visit-map {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 16px 60px rgba(74,46,26,0.15);
+    height: auto;
+  }
+  .visit-map iframe { width: 100%; height: 300px; border: 0; display: block; }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--warm-brown);
+    color: rgba(245,223,168,0.7);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--honey-pale);
+    margin-bottom: 0.3rem;
+  }
+  .footer-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 1.5rem;
+  }
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,223,168,0.6);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--honey-light); }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(245,223,168,0.35);
+    border-top: 1px solid rgba(200,139,58,0.2);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  /* ========== SOCIAL PROOF ========== */
+  .social-proof {
+    background: var(--cream);
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .social-proof-header { text-align: center; margin-bottom: 3.5rem; }
+  .social-proof-header .divider { margin: 0 auto 1.8rem; }
+
+  /* ---- Yelp badge strip ---- */
+  .yelp-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 20px rgba(74,46,26,0.07);
+    border: 1px solid rgba(200,139,58,0.12);
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .yelp-logo { display: flex; align-items: center; gap: 0.5rem; }
+  .yelp-logo svg { width: 70px; height: auto; }
+  .yelp-stars { display: flex; gap: 3px; }
+  .yelp-star { color: #FF1A1A; font-size: 1.3rem; }
+  .yelp-info { text-align: left; }
+  .yelp-rating-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--warm-brown);
+    line-height: 1;
+  }
+  .yelp-count {
+    font-size: 0.78rem;
+    color: var(--text-soft);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .yelp-btn {
+    background: #FF1A1A;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .yelp-btn:hover { background: #cc0000; transform: translateY(-1px); }
+
+  /* ---- Review cards ---- */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+  }
+  .review-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(74,46,26,0.07);
+    border: 1px solid rgba(200,139,58,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(74,46,26,0.12); }
+  .review-stars { display: flex; gap: 3px; }
+  .review-star { color: #FF1A1A; font-size: 1rem; }
+  .review-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.75;
+    flex: 1;
+  }
+  .review-text::before { content: '\201C'; color: var(--honey-light); font-size: 2rem; line-height: 0; vertical-align: -0.5rem; margin-right: 2px; }
+  .review-text::after  { content: '\201D'; color: var(--honey-light); font-size: 2rem; line-height: 0; vertical-align: -0.5rem; margin-left: 2px; }
+  .review-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cream-dark);
+  }
+  .review-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--honey-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--honey);
+    flex-shrink: 0;
+  }
+  .review-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--warm-brown);
+    line-height: 1.3;
+  }
+  .review-source {
+    font-size: 0.72rem;
+    color: var(--text-soft);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .review-source::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #FF1A1A; }
+
+  /* ---- Instagram section ---- */
+  .insta-section { margin-top: 1rem; }
+  .insta-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .insta-handle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--warm-brown);
+  }
+  .insta-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .insta-badge:hover { opacity: 0.88; transform: translateY(-1px); }
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .insta-placeholder {
+    aspect-ratio: 1;
+    background: var(--cream-dark);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    border: 2px dashed rgba(200,139,58,0.25);
+  }
+  .insta-placeholder:hover { background: var(--honey-pale); }
+  .insta-placeholder .insta-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  .insta-placeholder-icon { font-size: 2rem; opacity: 0.4; }
+  .insta-placeholder-text { font-size: 0.7rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .insta-note {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ========== HONEY DRIP DECOR ========== */
+  .honey-drip {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    opacity: 0.25;
+  }
+  .drip { width: 3px; border-radius: 3px; background: var(--honey); }
+
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ========== HAMBURGER ========== */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--warm-brown); border-radius: 2px; transition: all 0.3s; }
+
+  /* ========== DRINK OF THE MONTH ========== */
+  .dotm {
+    background: var(--warm-brown);
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 2rem;
+  }
+  .dotm::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(200,139,58,0.22) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(232,185,106,0.12) 0%, transparent 50%);
+  }
+  /* Honeycomb pattern */
+  .dotm::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 34L0 84V66l28 16 28-16v18L28 100z' fill='none' stroke='rgba(200,139,58,0.07)' stroke-width='1'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .dotm-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .dotm-visual {
+    position: relative;
+  }
+  .dotm-img-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .dotm-img-wrap img {
+    width: 100%;
+    max-width: 440px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 28px;
+    display: block;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.45);
+  }
+  /* Rotating badge */
+  .dotm-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .dotm-badge svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateBadge 18s linear infinite;
+  }
+  .dotm-badge-icon {
+    font-size: 2rem;
+    z-index: 1;
+  }
+  @keyframes rotateBadge {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* Glow behind image */
+  .dotm-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200,139,58,0.4) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .dotm-content { color: var(--cream); }
+
+  .dotm-overline {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--honey-light);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .dotm-overline::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--honey);
+    opacity: 0.5;
+  }
+
+  .dotm-month-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--honey-pale);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .dotm-month-title em {
+    font-style: italic;
+    color: var(--honey-light);
+  }
+
+  .dotm-divider {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--honey), transparent);
+    margin-bottom: 1.5rem;
+  }
+
+  .dotm-desc {
+    font-size: 1.05rem;
+    color: rgba(245,223,168,0.75);
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .dotm-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2.2rem;
+  }
+  .dotm-tag {
+    background: rgba(200,139,58,0.2);
+    border: 1px solid rgba(200,139,58,0.35);
+    color: var(--honey-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+  }
+
+  .dotm-price-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .dotm-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--honey-light);
+    line-height: 1;
+  }
+  .dotm-price-note {
+    font-size: 0.78rem;
+    color: rgba(245,223,168,0.5);
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .dotm .btn-primary {
+    background: var(--honey);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .dotm .btn-primary:hover {
+    background: var(--honey-light);
+    color: var(--warm-brown);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); padding: 1.5rem; gap: 1.2rem; border-bottom: 2px solid var(--honey-pale); }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .hero-images { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .dotm-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .dotm-img-wrap img { max-width: 100%; height: 360px; }
+    .dotm-badge { top: -12px; right: -12px; width: 88px; height: 88px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .yelp-strip { flex-direction: column; text-align: center; }
+    .yelp-info { text-align: center; }
+    .visit-inner { grid-template-columns: 1fr; }
+    .add-on-grid { grid-template-columns: 1fr; }
+    .menu-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-brand">
+    Milk & Honey
+    <span>Premium Tea · Glendora</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#dotm">Drink of the Month</a></li>
+    <li><a href="#visit">Visit Us</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <p class="hero-eyebrow">✦ Glendora's Own Premium Tea Shop ✦</p>
+  <h1>Sip Slow.<br/><em>Stay Awhile.</em></h1>
+  <p class="hero-tagline">Premium tea, served from the heart.</p>
+  <div class="hero-ctas">
+    <a href="#menu" class="btn-primary">Explore Our Menu</a>
+    <a href="https://maps.app.goo.gl/Ky1j2GPDf47TT2wUA" target="_blank" class="btn-outline">Find Us</a>
+  </div>
+  <div class="hero-images">
+    <div class="tea-card-mini">
+      <img src="img-drink-red.jpg" alt="Boba Bee" loading="lazy" />
+      <span class="label">Boba Bee</span>
+    </div>
+    <div class="tea-card-mini">
+      <img src="img-drink-matcha.jpg" alt="Jasmine Matcha Latte" loading="lazy" />
+      <span class="label">Jasmine Matcha</span>
+    </div>
+    <div class="tea-card-mini">
+      <img src="img-drink-orange.jpg" alt="Thai Iced Tea" loading="lazy" />
+      <span class="label">Thai Iced Tea</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner reveal">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <img src="img-seating.jpg" alt="Inside Milk and Honey Premium Tea" style="width:100%;border-radius:12px;display:block;margin-bottom:1rem;" />
+          <div class="about-poem-box">
+            <span class="pinky-icon">🤙</span>
+            <p class="poem-title">A Pinky Promise</p>
+            <p>
+              Every cup we pour is a promise —<br/>
+              crafted with care, steeped with love,<br/>
+              and delivered with a warmth<br/>
+              you can taste in every sip.<br/><br/>
+              This is our delicately kept promise<br/>
+              to you.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">More Than Tea —<br/><em>It's a Promise</em></h2>
+        <div class="divider"></div>
+        <p>
+          Milk & Honey Premium Tea was born from a simple belief: <strong>everyone deserves a moment that feels like home.</strong> Nestled right here in Glendora, we set out to create a place where great tea meets genuine warmth.
+        </p>
+        <p>
+          We hand-select premium teas — from delicate Magnolia Jasmine to bold Red Oolong — and pair them with house-made toppings, fresh foam, and real ingredients. Whether you're grabbing a classic Earl Grey or building your dream boba, <strong>every cup is made with intention.</strong>
+        </p>
+        <p>
+          We're your neighbors. Your corner spot. The place you'll want to come back to — because we promise we'll make it worth it.
+        </p>
+        <div class="about-badges">
+          <span class="badge">Premium Teas</span>
+          <span class="badge">House-Made Toppings</span>
+          <span class="badge">Glendora Local</span>
+          <span class="badge">Open 7 Days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="menu-header reveal">
+      <p class="section-label">What We're Brewing</p>
+      <h2 class="section-title">Our <em>Menu</em></h2>
+      <div class="divider"></div>
+      <p style="color:var(--text-soft);font-size:1rem;font-weight:300;max-width:480px;margin:0 auto;">
+        Build your perfect cup — choose your tea, customize your toppings, and make it yours.
+      </p>
+    </div>
+
+    <!-- TABS -->
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" onclick="showTab('signature')">Signature Drinks</button>
+      <button class="tab-btn" onclick="showTab('teas')">Pure Tea</button>
+      <button class="tab-btn" onclick="showTab('milktea')">Milk Teas</button>
+      <button class="tab-btn" onclick="showTab('teafree')">Tea Free</button>
+      <button class="tab-btn" onclick="showTab('customize')">Customize It</button>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="menu-category active" id="cat-signature">
+      <p class="menu-cat-title">Signature Drinks</p>
+      <p class="menu-cat-sub">Our Most-Loved Creations</p>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Milk Tea Boba</div>
+            <div class="menu-card-desc">Classic comfort in a cup</div>
+          </div>
+          <div class="menu-card-price">$6.45</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Brown Sugar Milk Tea Boba</div>
+            <div class="menu-card-desc">Rich, caramelized sweetness</div>
+          </div>
+          <div class="menu-card-price">$6.45</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Matcha Jasmine Latte</div>
+            <div class="menu-card-desc">Floral meets earthy perfection</div>
+          </div>
+          <div class="menu-card-price">$6.55</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Thai Iced Tea</div>
+            <div class="menu-card-desc">Bold, creamy & golden</div>
+          </div>
+          <div class="menu-card-price">$6.25</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Chai Latte</div>
+            <div class="menu-card-desc">Warm spice, velvety smooth</div>
+          </div>
+          <div class="menu-card-price">$6.25</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">London Fog</div>
+            <div class="menu-card-desc">Earl Grey, lavender & steamed milk</div>
+          </div>
+          <div class="menu-card-price">$5.95</div>
+        </div>
+        <div class="menu-card">
+          <div>
+            <div class="menu-card-name">Yuzu Arnold Palmer</div>
+            <div class="menu-card-desc">Citrusy, bright & refreshing</div>
+          </div>
+          <div class="menu-card-price">$6.45</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAS -->
+    <div class="menu-category" id="cat-teas">
+      <p class="menu-cat-title">Pure Tea</p>
+      <p class="menu-cat-sub">Hot or Iced — $5.25</p>
+      <div class="menu-list">
+        <div class="menu-list-item">Earl Grey</div>
+        <div class="menu-list-item">Magnolia Jasmine</div>
+        <div class="menu-list-item">Red Oolong</div>
+        <div class="menu-list-item">Loose Leaf (+7 min)</div>
+      </div>
+    </div>
+
+    <!-- MILK TEA -->
+    <div class="menu-category" id="cat-milktea">
+      <p class="menu-cat-title">Milk Teas</p>
+      <p class="menu-cat-sub">Silky · Creamy · Satisfying</p>
+      <div class="menu-list">
+        <div class="menu-list-item">Earl Grey Milk Tea &nbsp;<span style="color:var(--honey);font-weight:700;">$5.50</span></div>
+        <div class="menu-list-item">Red Oolong Milk Tea &nbsp;<span style="color:var(--honey);font-weight:700;">$5.50</span></div>
+        <div class="menu-list-item">Magnolia Jasmine Milk Tea &nbsp;<span style="color:var(--honey);font-weight:700;">$5.50</span></div>
+        <div class="menu-list-item">Caramel Milk Tea &nbsp;<span style="color:var(--honey);font-weight:700;">$5.50</span></div>
+        <div class="menu-list-item">Loose Leaf Latte (Hot or Iced) &nbsp;<span style="color:var(--honey);font-weight:700;">$5.50</span></div>
+        <div class="menu-list-item">Matcha Latte (Hot or Iced) &nbsp;<span style="color:var(--honey);font-weight:700;">$6.25</span></div>
+      </div>
+    </div>
+
+    <!-- TEA FREE -->
+    <div class="menu-category" id="cat-teafree">
+      <p class="menu-cat-title">Tea Free</p>
+      <p class="menu-cat-sub">No Tea · All Flavor — $5.25</p>
+      <div class="menu-list">
+        <div class="menu-list-item">Strawberry Boba Bee</div>
+        <div class="menu-list-item">Brown Sugar Boba Bee</div>
+        <div class="menu-list-item">Strawberry Italian Soda</div>
+        <div class="menu-list-item">Vanilla Italian Soda</div>
+        <div class="menu-list-item">Taro Milk Boba</div>
+        <div class="menu-list-item">San Pellegrino &nbsp;<span style="color:var(--honey);font-weight:700;">$3</span></div>
+        <div class="menu-list-item">Milk &nbsp;<span style="color:var(--honey);font-weight:700;">$3</span></div>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZE -->
+    <div class="menu-category" id="cat-customize">
+      <p class="menu-cat-title">Make It Yours</p>
+      <p class="menu-cat-sub">Toppings, Foam, Sweeteners & Milks</p>
+      <div class="add-on-grid">
+        <div class="add-on-box">
+          <div class="add-on-box-title">Toppings</div>
+          <div class="add-on-price-tag">+$0.50 each</div>
+          <div class="add-on-items">
+            <span class="add-on-item">Brown Sugar Boba</span>
+            <span class="add-on-item">Honey Boba</span>
+            <span class="add-on-item">Strawberry Pearls</span>
+            <span class="add-on-item">Mango Pearls</span>
+            <span class="add-on-item">Lychee Jelly</span>
+            <span class="add-on-item">Mango Jelly</span>
+            <span class="add-on-item">Rainbow Jelly</span>
+          </div>
+        </div>
+        <div class="add-on-box">
+          <div class="add-on-box-title">Foam &amp; Mousse</div>
+          <div class="add-on-price-tag">+$0.50 each</div>
+          <div class="add-on-items">
+            <span class="add-on-item">Sweet Cold Foam</span>
+            <span class="add-on-item">Vanilla Cold Foam</span>
+            <span class="add-on-item">Honey Cold Foam</span>
+            <span class="add-on-item">Strawberry Cold Foam</span>
+            <span class="add-on-item">Cream Cheese Mousse</span>
+          </div>
+        </div>
+        <div class="add-on-box">
+          <div class="add-on-box-title">Sweeten</div>
+          <div class="add-on-price-tag">+$0.50 each</div>
+          <div class="add-on-items">
+            <span class="add-on-item">Simple</span>
+            <span class="add-on-item">Honey</span>
+            <span class="add-on-item">Honey Lavender</span>
+            <span class="add-on-item">Brown Sugar</span>
+            <span class="add-on-item">Maple</span>
+            <span class="add-on-item">Caramel</span>
+            <span class="add-on-item">Taro</span>
+            <span class="add-on-item">Vanilla</span>
+            <span class="add-on-item">Strawberry</span>
+          </div>
+        </div>
+        <div class="add-on-box">
+          <div class="add-on-box-title">Milks</div>
+          <div class="add-on-price-tag">Your choice</div>
+          <div class="add-on-items">
+            <span class="add-on-item">House Milk</span>
+            <span class="add-on-item">Whole Milk</span>
+            <span class="add-on-item">Oat Milk</span>
+            <span class="add-on-item">Almond Milk</span>
+            <span class="add-on-item">Half &amp; Half</span>
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-soft);font-weight:300;margin-top:0.8rem;font-style:italic;">House Milk is our tea-infused whole milk.</p>
+        </div>
+        <div class="add-on-box" style="background:linear-gradient(135deg, var(--honey-pale), var(--cream-dark)); border-color: rgba(200,139,58,0.3);">
+          <div class="add-on-box-title" style="color:var(--warm-brown);">🍵 Pro Tip</div>
+          <p style="font-size:0.9rem;color:var(--text-soft);font-weight:300;line-height:1.7;margin-top:0.5rem;">
+            Start with a Red Oolong Milk Tea, add Honey Boba and a dollop of Cream Cheese Mousse.
+            Sweeten it with Brown Sugar. You can thank us later. 🤙
+          </p>
+        </div>
+        <div class="add-on-box" style="background:var(--warm-brown); border-color: rgba(200,139,58,0.3);">
+          <div class="add-on-box-title" style="color:var(--honey-pale);">Sweetness Level</div>
+          <p style="font-size:0.9rem;color:rgba(245,223,168,0.75);font-weight:300;line-height:1.7;margin-top:0.5rem;">
+            Choose your sweetness: <strong style="color:var(--honey-light);">25% · 50% · 75% · 100%</strong><br/>
+            Not sure? We recommend 75% for most drinks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DRINK OF THE MONTH -->
+<section class="dotm" id="dotm">
+  <div class="dotm-inner reveal">
+
+    <!-- Image side -->
+    <div class="dotm-visual">
+      <div class="dotm-glow"></div>
+      <div class="dotm-img-wrap">
+        <img
+          src="img-drink-brown.jpg"
+          alt="Drink of the Month — Brown Sugar Milk Tea Boba"
+          id="dotm-img"
+        />
+        <!-- Rotating badge -->
+        <div class="dotm-badge">
+          <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <path id="circle" d="M55,55 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/>
+            </defs>
+            <text fill="#E8B96A" font-size="11.2" font-family="Nunito, sans-serif" font-weight="700" letter-spacing="3.5">
+              <textPath href="#circle">✦ DRINK OF THE MONTH ✦ DRINK OF THE MONTH</textPath>
+            </text>
+          </svg>
+          <span class="dotm-badge-icon">🍵</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content side -->
+    <div class="dotm-content">
+      <p class="dotm-overline">April 2026</p>
+      <h2 class="dotm-month-title">Lavender Honey<br/><em>Oolong Latte</em></h2>
+      <div class="dotm-divider"></div>
+      <p class="dotm-desc" id="dotm-desc">
+        This month we're celebrating spring with our most requested seasonal creation. 
+        Our premium Red Oolong — naturally smooth and lightly floral — gets kissed with 
+        house lavender syrup, a drizzle of wildflower honey, and crowned with our signature 
+        Honey Cold Foam. It's calm in a cup. Floral, warm, and just a little magical.
+      </p>
+      <div class="dotm-tags">
+        <span class="dotm-tag">Red Oolong Base</span>
+        <span class="dotm-tag">Lavender Syrup</span>
+        <span class="dotm-tag">Honey Cold Foam</span>
+        <span class="dotm-tag">Seasonal</span>
+      </div>
+      <div class="dotm-price-row">
+        <span class="dotm-price">$7.25</span>
+        <span class="dotm-price-note">Available all of April<br/>while supplies last</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof" id="reviews">
+  <div class="container">
+    <div class="social-proof-header reveal">
+      <p class="section-label">What People Are Saying</p>
+      <h2 class="section-title">Loved by <em>Glendora</em></h2>
+      <div class="divider"></div>
+      <p style="color:var(--text-soft);font-size:1rem;font-weight:300;max-width:460px;margin:0 auto 2rem;">
+        Don't take our word for it — here's what our neighbors are saying.
+      </p>
+    </div>
+
+    <!-- Yelp Rating Strip -->
+    <div class="yelp-strip reveal">
+      <div class="yelp-logo">
+        <!-- Yelp wordmark SVG -->
+        <svg viewBox="0 0 70 30" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="24" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="#FF1A1A">yelp</text>
+        </svg>
+      </div>
+      <div>
+        <div class="yelp-stars">
+          <span class="yelp-star">★</span>
+          <span class="yelp-star">★</span>
+          <span class="yelp-star">★</span>
+          <span class="yelp-star">★</span>
+          <span class="yelp-star">★</span>
+        </div>
+        <div class="yelp-count">Based on our Yelp reviews</div>
+      </div>
+      <div class="yelp-info">
+        <div class="yelp-rating-num">5.0</div>
+        <div class="yelp-count">⭐ Rated 5 Stars on Yelp</div>
+      </div>
+      <a href="https://www.yelp.com/biz/milk-and-honey-premium-tea-glendora" target="_blank" class="yelp-btn">
+        Read Our Reviews →
+      </a>
+    </div>
+
+    <!-- Review Cards -->
+    <!-- ✏️ PASTE YOUR REAL YELP REVIEWS BELOW — update name, initial, and review text -->
+    <div class="reviews-grid reveal">
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">This place is legit. As someone who's tried boba all over the SGV, Milk &amp; Honey is something different. The Red Oolong is smooth and not overpowering — and the honey cold foam on top is *chef's kiss.* I will definitely be back.</p>
+        <div class="review-meta">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">Kevin M.</div>
+            <div class="review-source">Yelp Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">Absolutely love this spot. The Magnolia Jasmine tea is so delicate and floral — you can tell they use real premium ingredients. The vibe is cozy and the staff are genuinely sweet. Our new go-to in Glendora!</p>
+        <div class="review-meta">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sara L.</div>
+            <div class="review-source">Yelp Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span>
+        </div>
+        <p class="review-text">The Brown Sugar Milk Tea Boba is addicting. I've been twice this week. The boba is perfectly chewy, the tea flavor is strong and real — not watered down like other places. Glendora needed this.</p>
+        <div class="review-meta">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-name">Jasmine T.</div>
+            <div class="review-source">Yelp Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ✏️ END REVIEW CARDS — replace the above with your real Yelp reviews -->
+
+    <!-- Instagram Feed -->
+    <div class="insta-section reveal">
+      <div class="insta-header">
+        <p class="insta-handle">Follow us on Instagram</p>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          @milkandhoneypremiumtea
+        </a>
+      </div>
+
+      <!-- Instagram photo grid using your actual site photos -->
+      <div class="insta-grid">
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-drink-red.jpg" alt="Boba Bee" class="insta-img" />
+        </a>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-drink-orange.jpg" alt="Thai Iced Tea" class="insta-img" />
+        </a>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-drink-matcha.jpg" alt="Jasmine Matcha Latte" class="insta-img" />
+        </a>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-drink-brown.jpg" alt="Brown Sugar Milk Tea Boba" class="insta-img" />
+        </a>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-seating.jpg" alt="Inside Milk and Honey Tea" class="insta-img" />
+        </a>
+        <a href="https://www.instagram.com/milkandhoneypremiumtea/" target="_blank" class="insta-placeholder">
+          <img src="img-storefront.jpg" alt="Milk and Honey Storefront" class="insta-img" />
+        </a>
+      </div>
+      <p class="insta-note">📱 Tag us in your photos with <strong>#MilkAndHoneyTea</strong> — you might be featured here!</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="container">
+    <div class="visit-inner reveal">
+      <div class="visit-info">
+        <p class="section-label">Come See Us</p>
+        <h2 class="section-title">We'd Love to<br/><em>See You</em></h2>
+        <div class="divider"></div>
+
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <p class="info-label">Location</p>
+            <p class="info-value">
+              <a href="https://maps.app.goo.gl/Ky1j2GPDf47TT2wUA" target="_blank">
+                208 N Glendora Ave<br/>Glendora, CA
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">🕐</div>
+          <div>
+            <p class="info-label">Hours</p>
+            <p class="info-value">Monday – Sunday<br/>11:00 am – 9:00 pm</p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div>
+            <p class="info-label">Phone</p>
+            <p class="info-value"><a href="tel:6263878333">(626) 387-8333</a></p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">✉️</div>
+          <div>
+            <p class="info-label">Email</p>
+            <p class="info-value"><a href="mailto:hello@milkandhoneypremiumtea.com">hello@milkandhoneypremiumtea.com</a></p>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/Ky1j2GPDf47TT2wUA" target="_blank" class="btn-primary" style="display:inline-block;margin-top:1rem;">
+          Get Directions →
+        </a>
+      </div>
+
+      <div class="visit-map">
+        <img src="img-storefront.jpg" alt="Milk and Honey Premium Tea Storefront" style="width:100%;height:200px;object-fit:cover;object-position:center;" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9!2d-117.865!3d34.136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s208+N+Glendora+Ave%2C+Glendora%2C+CA!5e0!3m2!1sen!2sus!4v1"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Milk and Honey Tea Location"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-brand">Milk &amp; Honey Premium Tea</p>
+  <p class="footer-tag">✦ Glendora's Own Premium Tea Shop ✦</p>
+  <ul class="footer-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <p class="footer-copy">
+    208 N Glendora Ave, Glendora, CA &nbsp;·&nbsp; (626) 387-8333 &nbsp;·&nbsp; Open Daily 11am–9pm<br/>
+    © 2026 Milk &amp; Honey Premium Tea. All rights reserved.
+  </p>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Menu tabs
+  function showTab(id) {
+    document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('cat-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal'
