@@ -49,7 +49,7 @@
 
   /* ========== MONDAY PROMO BANNER ========== */
   .monday-banner {
-    display: none;
+    display: block;
     background: linear-gradient(90deg, var(--warm-brown), #3E2415, var(--warm-brown));
     color: var(--honey-pale);
     text-align: center;
@@ -1208,7 +1208,7 @@
 <!-- MONDAY PROMO BANNER -->
 <div class="monday-banner" id="mondayBanner">
   <span class="bee">🍯</span>
-  <span>Milk Tea Monday</span> &nbsp;—&nbsp; Buy One, Get One <span>50% Off</span>
+  <span>Milk Tea Mondays</span> &nbsp;—&nbsp; Buy One, Get One <span>Half Off</span>
   <span class="bee">🍯</span>
 </div>
 
@@ -1741,10 +1741,6 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Monday promo banner
-  const banner = document.getElementById('mondayBanner');
-  if (new Date().getDay() === 1) banner.style.display = 'block';
-
   // Nav scroll
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
