@@ -9,7 +9,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Milk &amp; Honey Premium Tea — Glendora's Own Premium Tea Shop</title>
-<meta name="description" content="Milk &amp; Honey Premium Tea is Glendora's cozy premium tea shop. Premium teas, boba drinks, and handcrafted lattes. Visit us at 208 N Glendora Ave. Open daily 11am–9pm." />
+<meta name="description" content="Milk &amp; Honey Premium Tea is Glendora's cozy premium tea shop. Premium teas, boba drinks, and handcrafted lattes. Visit us at 208 N Glendora Ave. Open daily 11am–8pm." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1157,7 +1157,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Milk & Honey Premium Tea — Glendora's Own Premium Tea Shop</title>
-<meta name="description" content="Milk & Honey Premium Tea is Glendora's cozy bubble tea house. Premium teas, boba drinks, and handcrafted lattes. Visit us at 208 N Glendora Ave. Open daily 11am–9pm." />
+<meta name="description" content="Milk & Honey Premium Tea is Glendora's cozy bubble tea house. Premium teas, boba drinks, and handcrafted lattes. Visit us at 208 N Glendora Ave. Open daily 11am–8pm." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -2757,7 +2757,7 @@
           <div class="info-icon">🕐</div>
           <div>
             <p class="info-label">Hours</p>
-            <p class="info-value">Monday – Sunday<br/>11:00 am – 9:00 pm</p>
+            <p class="info-value">Monday – Sunday<br/>11:00 am – 8:00 pm</p>
           </div>
         </div>
 
@@ -2806,7 +2806,7 @@
     <!-- <li><a href="https://milkandhoneypremiumtea.com/order-online/" target="_blank">Order Online</a></li> -->
   </ul>
   <p class="footer-copy">
-    208 N Glendora Ave, Glendora, CA &nbsp;·&nbsp; (626) 387-8333 &nbsp;·&nbsp; Open Daily 11am–9pm<br/>
+    208 N Glendora Ave, Glendora, CA &nbsp;·&nbsp; (626) 387-8333 &nbsp;·&nbsp; Open Daily 11am–8pm<br/>
     © 2026 Milk &amp; Honey Premium Tea. All rights reserved.
   </p>
 </footer>
